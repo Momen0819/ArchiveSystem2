@@ -1,0 +1,384 @@
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Title -->
+		<title>
+            نظام الارشيف الالكتروني للشركات و المؤسسات
+        </title>
+
+
+		<!-- *************
+			************ Common Css Files *************
+		************ -->
+		<!-- Bootstrap css -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+		<!-- Icomoon Font Icons css -->
+		<link rel="stylesheet" href="fonts/style.css">
+
+		<!-- Main css -->
+		<link rel="stylesheet" href="css/main.css">
+
+
+		<!-- *************
+			************ Vendor Css Files *************
+		************ -->
+		<!-- DateRange css -->
+		<link rel="stylesheet" href="vendor/daterange/daterange.css" />
+        <link rel="stylesheet" href="vendor/chartist/css/chartist.min.css">
+        <link rel="stylesheet" href="vendor/chartist/css/chartist-custom.css">
+        <style>#inspect-element-top-layer * { all: unset; }</style>
+        <link href="https://fonts.googleapis.com/css2?family=Tajawal&amp;display=swap" rel="stylesheet">
+
+        <style>
+            body {
+                font-family: 'Tajawal',Tahoma !important;
+            }
+    
+            h2, h1, h3, h4, h5, h6, a, p, li, span {
+                font-family: 'Tajawal',Tahoma !important;
+                letter-spacing: 0px !important;
+            }
+            /* width */
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+    
+            /* Track */
+            ::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+    
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+                background: #888;
+            }
+    
+                /* Handle on hover */
+                ::-webkit-scrollbar-thumb:hover {
+                    background: #555;
+                }
+    
+        </style>
+	</head>
+	<body>
+
+		<!-- Loading starts -->
+		<div id="loading-wrapper">
+			<div class="spinner-border" role="status">
+				<span class="sr-only">Loading...</span>
+			</div>
+		</div>
+		<!-- Loading ends -->
+
+
+		<!-- *************
+			************ Header section start *************
+		************* -->
+
+		<!-- Header start -->
+		<header class="header">
+			<div class="logo-wrapper">
+				<a href="#" class="logo">
+					<img src="content/logo.png" alt="" />
+				</a>
+			</div>
+			<div class="header-items">
+				<!-- Header actions start -->
+				<ul class="header-actions">
+					<li class="dropdown">
+                        <a href="#" id="userSettings" class="user-settings" data-toggle="dropdown" aria-haspopup="true">
+                            <span class="user-name">Farag</span>
+                            <span class="avatar"><img src="img/user.png" alt=""><span class="status busy"></span></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userSettings">
+                            <div class="header-profile-actions">
+                                <div class="header-user-profile">
+                                    <h5>Farag</h5>
+                                </div>
+                                <a href="EditProfile.html"><i class="icon-settings1"></i> تغير الرقم السري</a>
+                                <a href="Login.html"><i class="icon-log-out1"></i> تسجيل الخروج</a>
+                            </div>
+                        </div>
+                    </li>
+				</ul>						
+				<!-- Header actions end -->
+			</div>
+		</header>
+		<!-- Header end -->
+
+		<!-- Screen overlay start -->
+		<div class="screen-overlay"></div>
+		<!-- Screen overlay end -->
+
+		<!-- *************
+			************ Header section end *************
+		************* -->
+
+		<!-- Container fluid start -->
+		<div class="container-fluid">
+
+			<!-- Navigation start -->
+			<nav class="navbar navbar-expand-lg custom-navbar">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#WafiAdminNavbar" aria-controls="WafiAdminNavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon">
+						<i></i>
+						<i></i>
+						<i></i>
+					</span>
+				</button>
+				<div class="collapse navbar-collapse" id="WafiAdminNavbar">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link active-page" href="home.html" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="icon-home nav-icon"></i>
+								الصفحة الرئيسية
+							</a>
+						</li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="files.html">
+                                <i class="icon-archive  nav-icon"></i>
+                                الملفات
+                            </a>
+                        </li>
+                        <li class="nav-item">
+							<a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-delete nav-icon"></i>
+                                  
+سلة المهملات
+
+							</a>
+						</li>
+                        <li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="layoutsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-menu nav-icon"></i>
+                                الادارات و الاقسام
+							</a>
+							<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="layoutsDropdown">
+								<li>
+									<a class="sub-nav-link" href="#" id="submenuDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        الادارات
+                                    </a>
+								</li>
+								<li class="open-left">
+									<a class="sub-nav-link" href="#" id="submenuLeftDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        الاقسام 
+									</a>
+								</li>
+							</ul>
+						</li>
+                        <li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="layoutsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-file-text nav-icon"></i>
+                               التقارير
+							</a>
+							<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="layoutsDropdown">
+								<li>
+									<a class="sub-nav-link" href="#" id="submenuDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        	تقرير الملفات المرفوعة 
+                                    </a>
+								</li>
+								<li class="open-left">
+									<a class="sub-nav-link" href="#" id="submenuLeftDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        	تقرير الملفات المحذوفة  
+									</a>
+								</li>
+							</ul>
+						</li>
+                        <li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="layoutsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-settings1 nav-icon"></i>
+								الاعدادات
+							</a>
+							<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="layoutsDropdown">
+								<li>
+									<a class="sub-nav-link" href="#" id="submenuDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											مواقع التخزين الفعلي 
+									</a>
+								</li>
+								<li class="open-left">
+									<a class="sub-nav-link" href="#" id="submenuLeftDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											الرفوف 
+									</a>
+								</li>
+                                <li class="open-left">
+									<a class="sub-nav-link" href="#" id="submenuLeftDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											المجلدات 
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<!-- Navigation end -->
+
+			<!-- *************
+				************ Main container start *************
+			************* -->
+			<div class="main-container">
+
+				<!-- Page header start -->
+				<div class="page-header">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item">لوحة التحكم</li>
+						<li class="breadcrumb-item active">الصفحة الرئيسية</li>
+					</ol>
+				</div>
+				<!-- Page header end -->
+
+				<!-- Content wrapper start -->
+				<div class="content-wrapper">
+
+					<!-- Row starts -->
+					<div class="row gutters">
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+							<div class="card">
+								<div class="card-header">
+									<div class="card-title">
+                                        عدد الملفات في كل الادارات
+                                    </div>
+								</div>
+								<div class="card-body">
+
+									<!-- Row starts -->
+									<div class="row gutters">
+										<div class="col-xl-2 col-lg-4 col-md-4 col-sm-4 col-12">
+											<div class="ticket-status-card">
+												<h6>ادارة الموارد البشرية</h6>
+												<h3>72</h3>
+											</div>
+										</div>
+										<div class="col-xl-2 col-lg-4 col-md-4 col-sm-4 col-12">
+											<div class="ticket-status-card">
+												<h6>الادارة المالية</h6>
+												<h3>53</h3>
+											</div>
+										</div>
+										<div class="col-xl-2 col-lg-4 col-md-4 col-sm-4 col-12">
+											<div class="ticket-status-card">
+												<h6>ادارة المخازن</h6>
+												<h3>25</h3>
+											</div>
+										</div>
+										<div class="col-xl-2 col-lg-4 col-md-4 col-sm-4 col-12">
+											<div class="ticket-status-card">
+												<h6>ادارة التشغيل</h6>
+												<h3>2</h3>
+											</div>
+										</div>
+										<div class="col-xl-2 col-lg-4 col-md-4 col-sm-4 col-12">
+											<div class="ticket-status-card">
+												<h6>ادارة التسويق</h6>
+												<h3>58</h3>
+											</div>
+										</div>
+										<div class="col-xl-2 col-lg-4 col-md-4 col-sm-4 col-12">
+											<div class="ticket-status-card">
+												<h6>ادارة المراجعة المالية</h6>
+												<h3>67</h3>
+											</div>
+										</div>
+									</div>
+									<!-- Row ends -->
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Row ends -->
+
+					<div class="row gutters">
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+							<div class="card h-280">
+								<div class="card-header">
+									<div class="card-title">
+                                        رسم بياني لعدد الملفات في كل الادارات
+                                    </div>
+								</div>
+								<div class="card-body">
+									<div class="chartist bar-scheme-one">
+                                        <canvas id="myChart" style="width:100%;max-width:100%"></canvas>
+                                    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+				<!-- Content wrapper end -->
+
+			</div>
+			<!-- *************
+				************ Main container end *************
+			************* -->
+
+			<!-- Footer start -->
+			<footer class="main-footer">© نظام الارشيف الالكتروني للشركات و المؤسسات 2024</footer>
+			<!-- Footer end -->
+
+		</div>
+		<!-- Container fluid end -->
+
+		<!-- *************
+			************ Required JavaScript Files *************
+		************* -->
+		<!-- Required jQuery first, then Bootstrap Bundle JS -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/moment.js"></script>
+
+
+		<!-- *************
+			************ Vendor Js Files *************
+		************* -->
+		<!-- Slimscroll JS -->
+		<script src="vendor/slimscroll/slimscroll.min.js"></script>
+		<script src="vendor/slimscroll/custom-scrollbar.js"></script>
+
+		<!-- Daterange -->
+		<script src="vendor/daterange/daterange.js"></script>
+		<script src="vendor/daterange/custom-daterange.js"></script>
+
+        <script src="vendor/chartist/js/chartist.min.js"></script>
+        <script src="vendor/chartist/js/chartist-tooltip.js"></script>
+        <script src="vendor/chartist/js/custom/threshold/threshold.js"></script>
+        <script src="vendor/chartist/js/custom/bar/bar-chart-orders.js"></script>
+		<!-- Apex Charts -->
+		<script src="vendor/jvectormap/jquery-jvectormap-2.0.3.min.js"></script>
+        <script src="vendor/jvectormap/gdp-data.js"></script>
+        <script src="vendor/rating/raty.js"></script>
+        <script src="vendor/rating/raty-custom.js"></script>
+        <script src="js/main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+        <script>
+            var xValues = ["ادارة الموارد البشرية", "الادارة المالية", "ادارة المخازن", "ادارة التشغيل", "ادارة التسويق","ادارة المراجعة المالية"];
+            var yValues = [72, 53, 25, 2, 58,67];
+            var barColors = ["lightblue","lightblue","lightblue","lightblue","lightblue","lightblue"];
+
+            new Chart("myChart", {
+            type: "bar",
+            data: {
+                labels: xValues,
+                datasets: [{
+                backgroundColor: barColors,
+                data: yValues
+                }]
+            },
+            options: {
+                legend: {display: false},
+                title: {
+                display: true,
+                text: "  رسم بياني لعدد الملفات في كل الادارات"
+                }
+            }
+            });
+        </script>
+	</body>
+</html>
